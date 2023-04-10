@@ -1,0 +1,93 @@
+
+
+
+	Map
+		width
+		height
+		array [x][y] tile
+		
+		set(x,y,tile)
+		canSeeThroughTile(x,y)
+		canMoveThroughTile(x,y)
+		
+		load(mapData, charToTileType, defaultTileType) 
+		generate()
+		
+	Tile
+		id
+		type
+		name
+		explored
+		passable
+		blocksLoS
+		x
+		y
+		char
+		color
+		bgcolor
+		
+		onEnter () 
+		onExit ()
+		onBump (if !passable)
+		
+	Entities
+	
+		Player
+		Actors
+		Items
+		Fixtures
+		
+		Components
+			Health
+			MoveAI
+			FightAI
+			
+			
+Dungeon
+	Seed:			Number
+	Name: 			Flavor name
+	Description : 	Flavor text
+	Type: 			Dungeon / Cavern / etc
+	Options:		Occupied / Doomed / etc
+	Levels:
+		Depth
+		DungeonMap
+			Height
+			Width
+			Tiles
+		Entities
+			Monsters
+			Items
+			Other
+		Visualdata
+		
+		
+Monster
+	Type:
+	X,Y:
+	Stats:
+		HP
+		Mana
+		Speed
+		Atk
+		Def
+		Armor
+		
+	Features:
+		Flying / Psychic / etc
+	AI:
+		Aggressive / Fearful / etc
+	Items:
+
+	
+Group of Monsters
+	Monster
+	Relationship
+	
+Item
+	Name
+	Type
+	Stats
+	Features
+	Weight
+	Value

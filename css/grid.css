@@ -1,0 +1,86 @@
+/* @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap'); */
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Nunito&display=swap');
+
+* {
+/*  font-family: 'Nunito', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    color: #666;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #ccc;
+
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas:
+    "head head head"
+    ". main ."
+    "foot foot foot";
+}
+
+@media (max-width: 600px) {
+    body {
+        width: 100vw;
+        height: 100vh;        
+        display: grid;
+    
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 9fr 1fr;
+        grid-template-areas:
+        "head"
+        "main"
+        "foot";
+    }
+}
+
+
+.header {
+    display: grid;
+    place-items: center;
+    grid-area: head;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    font-weight: normal;
+    color: #fff;
+    user-select: none;
+}
+
+.main-section {
+    background-color: #ddd;
+    font-weight: lighter;
+    grid-area: main;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.main-section:hover {
+    font-style: italic;
+}
+
+.main-section p {
+    margin: 0;
+}
+
+.footer {
+    display: grid;
+    place-items: center;
+    grid-area: foot;
+    font-size: 0.75em;
+}
+
+.footer p {
+    color: #666;
+    user-select: none;
+}
